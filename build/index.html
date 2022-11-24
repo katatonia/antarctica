@@ -11,106 +11,163 @@
 </head>
 
 <body>
-
-  <header class="header no-js">
-    <div class="header__container container no-js">
-      <a class="header__logo" href="#">
-        <svg width="70" height="38" viewBox="0 0 70 38">
-          <use xlink:href="img/sprite.svg#logo"></use>
-        </svg>
-      </a>
-      <div class="header__menu menu">
-        <button class="menu__toggle">
-          <svg width="24" height="22" viewBox="0 0 24 22">
-            <use xlink:href="img/sprite.svg#burger"></use>
+  <div class="wrapper">
+    <header class="header no-js">
+      <div class="header__container container no-js">
+        <a class="header__logo" href="#">
+          <svg width="70" height="38" viewBox="0 0 70 38">
+            <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
-        </button>
-        <nav class="menu__nav">
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a href="#">Преимущества</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#">Направления</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#">Ближайшие круизы</a>
-            </li>
-            <li class="menu__list-item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="sidebar no-js">
-      <aside class="sidebar__aside no-js">
-        <div class="sidebar__container no-js">
-          <div class="sidebar__wrapper">
-            <div class="sidebar__icons">
-              <a class="sidebar__logo" href="#">
-                <svg width="42" height="22" viewBox="0 0 42 22">
-                  <use xlink:href="img/sprite.svg#logo"></use>
-                </svg>
-              </a>
-              <button class="sidebar__toggle no-js">
-                <svg width="13" height="25" viewBox="0 0 13 25">
-                  <use xlink:href="img/sprite.svg#icon-close"></use>
-                </svg>
-              </button>
-            </div>
-            <ul class="sidebar__list">
-              <li class="sidebar__list-item">
+        </a>
+        <div class="header__menu menu">
+          <button class="menu__toggle">
+            <svg width="24" height="22" viewBox="0 0 24 22">
+              <use xlink:href="img/sprite.svg#burger"></use>
+            </svg>
+          </button>
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__list-item">
                 <a href="#">Преимущества</a>
               </li>
-              <li class="sidebar__list-item">
+              <li class="menu__list-item">
                 <a href="#">Направления</a>
               </li>
-              <li class="sidebar__list-item">
+              <li class="menu__list-item">
                 <a href="#">Ближайшие круизы</a>
               </li>
-              <li class="sidebar__list-item">
+              <li class="menu__list-item">
                 <a href="#">Контакты</a>
               </li>
             </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="sidebar no-js">
+        <aside class="sidebar__aside no-js">
+          <div class="sidebar__container no-js">
+            <div class="sidebar__wrapper">
+              <div class="sidebar__icons">
+                <a class="sidebar__logo" href="#">
+                  <svg width="42" height="22" viewBox="0 0 42 22">
+                    <use xlink:href="img/sprite.svg#logo"></use>
+                  </svg>
+                </a>
+                <button class="sidebar__toggle no-js">
+                  <svg width="13" height="25" viewBox="0 0 13 25">
+                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+              </div>
+              <ul class="sidebar__list">
+                <li class="sidebar__list-item">
+                  <a href="#">Преимущества</a>
+                </li>
+                <li class="sidebar__list-item">
+                  <a href="#">Направления</a>
+                </li>
+                <li class="sidebar__list-item">
+                  <a href="#">Ближайшие круизы</a>
+                </li>
+                <li class="sidebar__list-item">
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main class="main no-js">
+      <div class="main__wrapper">
+        <div class="main__container container">
+          <h1 class="main__title">Круизы в&nbsp;Антарктику</h1>
+          <p class="main__subtitle">Волшебный мир <br>айсбергов и&nbsp;пингвинов</p>
+        </div>
+        <div class="main__bg bg-img">
+          <picture>
+            <source media="(max-width: 767px)" type="image/webp"
+              srcset="img/main/main-bg-mobile.webp 1x, img/main/main-bg-mobile@2x.webp 2x">
+            <source media="(max-width: 1023px)" type="image/webp"
+              srcset="img/main/main-bg-tablet.webp 1x, img/main/main-bg-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/main/main-bg-desktop.webp 1x, img/main/main-bg-desktop@2x.webp 2x">
+
+            <source media="(max-width: 767px)"
+              srcset="img/main/main-bg-mobile.jpg 1x, img/main/main-bg-mobile@2x.jpg 2x" width="320" height="500">
+            <source media="(max-width: 1023px)"
+              srcset="img/main/main-bg-tablet.jpg 1x, img/main/main-bg-tablet@2x.jpg 2x" width="768" height="638">
+            <img src="img/main/main-bg-desktop.jpg.jpg" srcset="img/main/main-bg-desktop@2x.jpg 2x"
+              alt="Застеженные горы на фоне воды" width="1366" height="650">
+          </picture>
+        </div>
+      </div>
+
+      <section class="intro">
+        <div class="intro__container container">
+          <div class="intro__wrapper">
+            <h1 class="intro__title">Путешествие на&nbsp;край Земли</h1>
+            <p class="intro__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром
+              Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,
+              несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+          </div>
+          <div class="intro__img">
+            <picture>
+              <source type="image/webp" srcset="img/intro.webp 1x, img/intro@2x.webp 2x">
+              <img src="img/intro.jpg" srcset="img/intro@2x.jpg 2x" alt="Три пингвина" width="560" height="301">
+            </picture>
           </div>
         </div>
-      </aside>
-    </div>
-  </header>
+      </section>
+    </main>
 
-  <main class="main no-js">
-    <div class="main__wrapper">
-      <div class="main__container container">
-        <h1 class="main__title">Круизы в&nbsp;Антарктику</h1>
-        <p class="main__subtitle">Волшебный мир <br>айсбергов и&nbsp;пингвинов</p>
+    <footer class="footer">
+      <div class="footer__container ">
+        <a class="footer__logo" href="#">
+          <svg width="70" height="38" viewBox="0 0 70 38">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <ul class="footer__nav footer-menu">
+          <li class="footer-menu__item">
+            <a href="#">Преимущества</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#">Направления</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#">Ближайшие круизы</a>
+          </li>
+          <li class="footer-menu__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <ul class="footer__accounts">
+          <li class="footer__accounts-item ok">
+            <a href="#">
+              <svg width="12" height="20" viewBox="0 0 12 20">
+                <use xlink:href="img/sprite.svg#ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__accounts-item dzen">
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <use xlink:href="img/sprite.svg#dzen"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__accounts-item reddit">
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 20 20">
+                <use xlink:href="img/sprite.svg#reddit"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="main__bg bg-img">
-        <picture>
-          <source media="(max-width: 767px)" type="image/webp" srcset="img/main/main-bg-mobile.webp 1x, img/main/main-bg-mobile@2x.webp 2x">
-          <source media="(max-width: 1023px)" type="image/webp" srcset="img/main/main-bg-tablet.webp 1x, img/main/main-bg-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/main/main-bg-desktop.webp 1x, img/main/main-bg-desktop@2x.webp 2x">
-
-          <source media="(max-width: 767px)" srcset="img/main/main-bg-mobile.jpg 1x, img/main/main-bg-mobile@2x.jpg 2x" width="320" height="500">
-          <source media="(max-width: 1023px)" srcset="img/main/main-bg-tablet.jpg 1x, img/main/main-bg-tablet@2x.jpg 2x" width="768" height="638">
-          <img src="img/main/main-bg-desktop.jpg.jpg" srcset="img/main/main-bg-desktop@2x.jpg 2x" alt="Застеженные горы на фоне воды" width="1366"
-            height="650">
-        </picture>
-      </div>
-    </div>
-
-    <section class="intro">
-      <div class="intro__container container">
-        <div class="intro__wrapper">
-          <h1 class="intro__title">Путешествие на&nbsp;край Земли</h1>
-          <p class="intro__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
-        </div>
-        <div class="intro__img">
-          <img src="img/intro.jpg" alt="Три пингвина" width="560" height="301">
-        </div>
-      </div>
-    </section>
-  </main>
+    </footer>
+  </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

@@ -433,6 +433,7 @@ template {
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -1070,6 +1071,112 @@ button,
   max-width: 100%;
 }
 
+.footer {
+  min-height: 138px;
+  background-color: #011C40;
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.footer__logo {
+  width: 70px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.footer__logo svg {
+  fill: #ffffff;
+}
+
+.footer__logo svg.focus-visible:focus {
+  fill: #ffd801;
+}
+
+.footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 42px;
+  margin-left: 40px;
+  list-style: none;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 0;
+}
+
+.footer-menu__item a {
+  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.footer-menu__item a.focus-visible:focus {
+  color: #ffd801;
+}
+
+.footer__accounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 27px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0;
+}
+
+.footer__accounts-item {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__accounts-item.focus-visible:focus {
+  color: #ffd801;
+}
+
+.footer__accounts-item.ok {
+  width: 12px;
+  height: 20px;
+}
+
+.footer__accounts-item.dzen,
+.footer__accounts-item.reddit {
+  width: 12px;
+  height: 20px;
+}
+
+.footer__accounts-item svg {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+
+.footer__accounts-item svg.focus-visible:focus {
+  fill: #ffd801;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1178,6 +1285,42 @@ button,
 
   .intro__img img {
     padding-right: 10px;
+  }
+
+  .footer__logo {
+    width: 38px;
+    height: 20px;
+  }
+
+  .footer__logo svg {
+    width: 38px;
+    height: 20px;
+  }
+
+  .footer-menu__item a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .footer__accounts-item {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer__accounts-item.ok {
+    width: 10px;
+    height: 16px;
+  }
+
+  .footer__accounts-item.dzen,
+  .footer__accounts-item.reddit {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer__accounts-item svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -1320,6 +1463,33 @@ button,
     -ms-flex-pack: center;
     justify-content: center;
   }
+
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .footer__logo {
+    padding-bottom: 30px;
+  }
+
+  .footer-menu {
+    margin: 0 0 30px;
+    gap: 23px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .footer__accounts {
+    padding: 0;
+  }
 }
 
 @media (hover: hover) {
@@ -1349,5 +1519,21 @@ button,
 
   .sidebar__list-item a:hover:not(.focus-visible) {
     color: #ffd801;
+  }
+
+  .footer__logo svg:hover:not(.focus-visible) {
+    fill: #ffd801;
+  }
+
+  .footer-menu__item a:hover:not(.focus-visible) {
+    color: #ffd801;
+  }
+
+  .footer__accounts-item:hover:not(.focus-visible) {
+    color: #ffd801;
+  }
+
+  .footer__accounts-item svg:hover:not(.focus-visible) {
+    fill: #ffd801;
   }
 }
