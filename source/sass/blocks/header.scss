@@ -1,0 +1,73 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+
+  @media (max-width: $vp-1023) {
+    padding-top: 21px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 19px;
+  }
+
+  &.no-js {
+    @media (max-width: $vp-767) {
+      position: relative;
+      padding-top: 0;
+    }
+  }
+}
+
+.header__logo{
+  z-index: 2;
+
+  @media (max-width: $vp-1023) {
+    width: 38px;
+    height: 20px;
+    margin-top: 9px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 42px;
+    height: 22px;
+    margin-top: 0;
+  }
+}
+
+.header__logo svg {
+  fill: $color-default-white;
+
+  @include hover-focus {
+    fill: $color-school-bus-yellow;
+  }
+
+  @media (max-width: $vp-1023) {
+    width: 38px;
+    height: 20px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 38px;
+
+  &.no-js {
+    @media (max-width: $vp-767) {
+      display: none;
+    }
+  }
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $vp-767) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
