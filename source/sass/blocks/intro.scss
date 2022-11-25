@@ -2,29 +2,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
-  margin-top: 110px;
+  padding: 110px 0 145px;
 
   @media (max-width: $vp-1023) {
-    margin-top: 100px;
+    margin: 100px 0 75px;
     grid-column-gap: 20px;
   }
 
   @media (max-width: $vp-767) {
     grid-template-columns: 1fr;
     margin-top: 58px;
-    padding-bottom: 90px;
+    padding-bottom: 10px;
   }
 }
 
 .intro__wrapper {
-  padding: 58px 25px 0 0;
+  padding: 58px 25px 0 20px;
 
   @media (max-width: $vp-1023) {
-    padding: 0 0 0 5px;
+    padding: 0;
   }
 
   @media (max-width: $vp-767) {
-    padding: 0 0 23px 0;
+    padding: 0 0 43px 0;
   }
 }
 
@@ -37,6 +37,7 @@
   color: $color-tangaroa;
   margin: 0;
   padding: 0 0 24px 0;
+  cursor: default;
 
   @media (max-width: $vp-1023) {
     font: {
@@ -62,6 +63,7 @@
   line-height: 24px;
   padding: 0;
   margin: 0;
+  cursor: default;
 }
 
 .intro__img {
@@ -75,8 +77,4 @@
 
 .intro__img img {
   max-width: 100%;
-
-  @media (max-width: $vp-1023) {
-    padding-right: 10px;
-  }
 }

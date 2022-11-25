@@ -1,0 +1,83 @@
+.contacts__container {
+  display: grid;
+  grid-template-areas: "map address";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  margin: {
+    top: 120px;
+    bottom: 120px;
+  }
+
+  @media (max-width: $vp-1023) {
+    grid-gap: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: minmax(290px, 1fr);
+    grid-template-areas:
+      "address"
+      "map";
+  }
+}
+
+.contacts__map {
+  grid-area: map;
+  display: flex;
+  justify-content: center;
+}
+
+.contacts__map iframe {
+  display: block;
+  border: none;
+
+  @media (max-width: $vp-1023) {
+    min-width: 324px;
+    height: 335px;
+  }
+
+  @media (max-width: $vp-767) {
+    min-width: 290px;
+    height: 316px;
+  }
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  grid-area: address;
+  padding-top: 75px;
+
+  @media (max-width: $vp-1023) {
+    padding: 0;
+  }
+}
+
+.contacts__title {
+  font: {
+    font: $ff-montserrat-medium;
+    size: 18px;
+  }
+  line-height: 27px;
+  color: $color-tangaroa;
+  margin: 0 0 28px;
+  cursor: default;
+}
+
+.contacts a {
+  font: {
+    family: $ff-montserrat-regular;
+    size: 16px;
+  }
+  line-height: 24px;
+  color: $color-tangaroa;
+  cursor: pointer;
+  padding-bottom: 20px;
+
+  @include hover-focus {
+    fill: $color-school-bus-yellow;
+  }
+}
+
+.contacts a span {
+  padding-left: 6px;
+}
