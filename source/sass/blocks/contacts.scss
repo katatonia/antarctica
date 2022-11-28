@@ -29,14 +29,13 @@
 .contacts__map iframe {
   display: block;
   border: none;
+  width: 100%;
 
   @media (max-width: $vp-1023) {
-    min-width: 324px;
     height: 335px;
   }
 
   @media (max-width: $vp-767) {
-    min-width: 290px;
     height: 316px;
   }
 }

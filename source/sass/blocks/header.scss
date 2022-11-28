@@ -2,6 +2,7 @@
   position: absolute;
   width: 100%;
   padding-top: 32px;
+  z-index: 1;
 
   @media (max-width: $vp-1023) {
     padding-top: 21px;

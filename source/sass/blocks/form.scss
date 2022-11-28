@@ -1,0 +1,112 @@
+form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-tangaroa;
+  padding: 50px;
+
+  @media (max-width: $vp-1023) {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 290px;
+    padding: 40px 30px;
+  }
+}
+
+form h2 {
+  font: {
+    family: $ff-montserrat-medium;
+    size: 18px;
+  }
+  line-height: 27px;
+  color: $color-default-white;
+  padding: 0;
+  margin: 0 0 35px 0;
+  text-align: center;
+}
+
+.form__field {
+  width: 100%;
+  margin-bottom: 20px;
+  border-color: $color-default-white;
+
+  @include hover-focus {
+    border-color: $color-school-bus-yellow;
+  }
+}
+
+.form__field input {
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 10px 0 10px 16px;
+
+  @include hover-focus {
+    border: 1px solid $color-school-bus-yellow;
+  }
+}
+
+.form__field input::placeholder {
+  font: {
+    family: $ff-montserrat-regular;
+    size: 14px;
+  }
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field.agree {
+  display: flex;
+  position: relative;
+}
+
+.form__field.agree label {
+  font: {
+    family: $ff-montserrat-regular;
+    size: 10px;
+  }
+  line-height: 12px;
+  color: $color-default-white;
+  padding-left: 2.2em;
+}
+
+.form__field.agree input {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  appearance: none;
+  z-index: 1;
+}
+
+.form__field.agree span {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url('../img/svg/checkbox-unchecked.svg') 0 0 no-repeat;
+  margin-left: -0.2em;
+}
+
+.form__field.agree input:checked + span {
+  background: url('../img/svg/checkbox-checked.svg') 0 0 no-repeat;
+}
+
+form button {
+  font: {
+    family: $ff-montserrat-semi-bold;
+    size: 14px;
+  }
+  line-height: 21px;
+  color: $color-tangaroa;
+  width: 100%;
+  background-color: $color-default-white;
+  border: none;
+  padding: 15px 0;
+  cursor: pointer;
+
+  @include hover-focus {
+    color: $color-school-bus-yellow;
+  }
+}

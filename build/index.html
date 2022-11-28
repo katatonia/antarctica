@@ -97,7 +97,7 @@
               srcset="img/main/main-bg-mobile.jpg 1x, img/main/main-bg-mobile@2x.jpg 2x" width="320" height="500">
             <source media="(max-width: 1023px)"
               srcset="img/main/main-bg-tablet.jpg 1x, img/main/main-bg-tablet@2x.jpg 2x" width="768" height="638">
-            <img src="img/main/main-bg-desktop.jpg.jpg" srcset="img/main/main-bg-desktop@2x.jpg 2x"
+            <img src="img/main/main-bg-desktop.jpg" srcset="img/main/main-bg-desktop@2x.jpg 2x"
               alt="Застеженные горы на фоне воды" width="1366" height="650">
           </picture>
         </div>
@@ -158,7 +158,64 @@
             </ul>
           </div>
           <div class="features__bg bg-img">
-            <img src="img/features-bg.jpg" alt="Горы в снегу" width="1366" height="562">
+            <picture>
+              <source type="image/webp" srcset="img/features-bg.webp 1x, img/features-bg@2x.webp 2x">
+              <img src="img/features-bg.jpg" srcset="img/features-bg@2x.jpg 2x" alt="Горы в снегу" width="1366" height="562">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking">
+        <div class="booking__wrapper">
+          <div class="booking__container container">
+            <div class="booking__content">
+              <h2>Раннее бронирование</h2>
+              <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+            </div>
+            <form class="booking__form" action="https://echo.htmlacademy.ru" method="post">
+              <h2>Оставьте заявку и мы свяжемся с вами в ближайшее время</h2>
+              <div class="form__field name">
+                <label>
+                  <input name="Имя" type="text" placeholder="Имя" required></input>
+                </label>
+              </div>
+              <div class="form__field tel">
+                <label>
+                  <input name="Телефон" type="tel" placeholder="Телефон" required></input>
+                </label>
+              </div>
+              <div class="form__field email">
+                <label>
+                  <input name="Email" type="email" placeholder="Email" required></input>
+                </label>
+              </div>
+              <div class="form__field agree">
+                <input name="agree" type="checkbox" required checked>
+                <span></span>
+                <label for="agree">
+                  Я согласен на обработку моих персональных данных
+                </label>
+              </div>
+              <button type="submit">Отправить заявку</button>
+              </div>
+            </form>
+
+          <div class="booking__bg bg-img">
+            <picture>
+              <source media="(max-width: 767px)" type="image/webp"
+                srcset="img/booking/booking-bg-mobile.webp 1x, img/booking/booking-bg-mobile@2x.webp 2x">
+              <source media="(max-width: 1023px)" type="image/webp"
+                srcset="img/booking/booking-bg-tablet.webp 1x, img/booking/booking-bg-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/booking/booking-bg-desktop.webp 1x, img/booking/booking-bg-desktop@2x.webp 2x">
+
+              <source media="(max-width: 767px)"
+                srcset="img/booking/booking-bg-mobile.jpg 1x, img/booking/booking-bg-mobile@2x.jpg 2x" width="320" height="760">
+              <source media="(max-width: 1023px)"
+                srcset="img/booking/booking-bg-tablet.jpg 1x, img/booking/booking-bg-tablet@2x.jpg 2x" width="768" height="805">
+              <img src="img/booking/booking-bg-desktop.jpg" srcset="img/booking/booking-bg-desktop@2x.jpg 2x"
+                alt="Горы и ледники на фоне воды и голубого неба" width="1366" height="555">
+            </picture>
           </div>
         </div>
       </section>

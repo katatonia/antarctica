@@ -808,6 +808,7 @@ button,
   position: absolute;
   width: 100%;
   padding-top: 32px;
+  z-index: 1;
 }
 
 .header__logo {
@@ -1150,6 +1151,201 @@ button,
   background-color: #E3ECF6;
 }
 
+.booking__wrapper {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.booking__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 140px 400px;
+  grid-template-columns: 1fr 400px;
+  grid-template-areas: "content form";
+  grid-column-gap: 140px;
+}
+
+.booking__content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.booking__content h2 {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 60px;
+  color: #011C40;
+  padding: 0;
+  margin: 0;
+}
+
+.booking__content p {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #011C40;
+  padding: 0;
+  margin: 0;
+}
+
+.booking__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #E3ECF6;
+}
+
+form {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: form;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #011C40;
+  padding: 50px;
+}
+
+form h2 {
+  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  padding: 0;
+  margin: 0 0 35px 0;
+  text-align: center;
+}
+
+.form__field {
+  width: 100%;
+  margin-bottom: 20px;
+  border-color: #ffffff;
+}
+
+.form__field.focus-visible:focus {
+  border-color: #ffd801;
+}
+
+.form__field input {
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 10px 0 10px 16px;
+}
+
+.form__field input.focus-visible:focus {
+  border: 1px solid #ffd801;
+}
+
+.form__field input::-webkit-input-placeholder {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-moz-placeholder {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input:-ms-input-placeholder {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-ms-input-placeholder {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::placeholder {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field.agree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.form__field.agree label {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ffffff;
+  padding-left: 2.2em;
+}
+
+.form__field.agree input {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 1;
+}
+
+.form__field.agree span {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url("../img/svg/checkbox-unchecked.svg") 0 0 no-repeat;
+  margin-left: -0.2em;
+}
+
+.form__field.agree input:checked + span {
+  background: url("../img/svg/checkbox-checked.svg") 0 0 no-repeat;
+}
+
+form button {
+  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011C40;
+  width: 100%;
+  background-color: #ffffff;
+  border: none;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+form button.focus-visible:focus {
+  color: #ffd801;
+}
+
 .contacts__container {
   display: -ms-grid;
   display: grid;
@@ -1176,6 +1372,7 @@ button,
 .contacts__map iframe {
   display: block;
   border: none;
+  width: 100%;
 }
 
 .contacts__wrapper {
@@ -1464,12 +1661,48 @@ button,
     padding-bottom: 100px;
   }
 
+  .booking__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .booking__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "content" "form";
+  }
+
+  .booking__content {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .booking__content p {
+    text-align: center;
+  }
+
+  .booking__content {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  form {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+
+  form {
+    width: 400px;
+    margin: 0 auto;
+  }
+
   .contacts__container {
     grid-gap: 30px;
   }
 
   .contacts__map iframe {
-    min-width: 324px;
     height: 335px;
   }
 
@@ -1674,6 +1907,23 @@ button,
     padding-bottom: 100px;
   }
 
+  .booking__content h2 {
+    font-size: 24px;
+    line-height: 31px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+
+  .booking__content p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  form {
+    width: 290px;
+    padding: 40px 30px;
+  }
+
   .contacts__container {
     -ms-grid-columns: minmax(290px, 1fr);
     grid-template-columns: minmax(290px, 1fr);
@@ -1682,7 +1932,6 @@ button,
   }
 
   .contacts__map iframe {
-    min-width: 290px;
     height: 316px;
   }
 
@@ -1750,6 +1999,18 @@ button,
   }
 
   .sidebar__list-item a:hover:not(.focus-visible) {
+    color: #ffd801;
+  }
+
+  .form__field:hover:not(.focus-visible) {
+    border-color: #ffd801;
+  }
+
+  .form__field input:hover:not(.focus-visible) {
+    border: 1px solid #ffd801;
+  }
+
+  form button:hover:not(.focus-visible) {
     color: #ffd801;
   }
 
