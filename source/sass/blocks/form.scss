@@ -36,6 +36,26 @@ form h2 {
   }
 }
 
+form .booking__br-tablet {
+  display: none;
+
+  @media (max-width: $vp-1023) {
+    display: block;
+  }
+
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+form .booking__br-mobile {
+  display: none;
+
+  @media (max-width: $vp-767) {
+    display: block;
+  }
+}
+
 .form__field {
   width: 100%;
   margin-bottom: 22px;
@@ -69,9 +89,11 @@ form h2 {
   display: flex;
   position: relative;
   margin-bottom: 33px;
+  padding-right: 0;
 
   @media (max-width: $vp-767) {
     margin-bottom: 23px;
+    padding-right: 45px;
   }
 }
 

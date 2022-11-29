@@ -100,17 +100,22 @@
   }
 }
 
-.booking__content p br {
+.booking__br-mobile {
   display: none;
 
-  @media (max-width: $vp-1023) {
+  @media (max-width: $vp-767) {
     display: block;
   }
+}
+
+.booking__br-tablet {
+  display: block;
 
   @media (max-width: $vp-767) {
     display: none;
   }
 }
+
 
 .booking__bg {
   position: absolute;

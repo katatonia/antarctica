@@ -8,6 +8,10 @@
   <meta name="description" content="Бронирование круизов и экскурсионных туров в Антакрктику.">
   <title>Антарктика: Круизы в Антарктику</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semi-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
@@ -28,16 +32,16 @@
           <nav class="menu__nav">
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a href="#">Преимущества</a>
+                <a href="#features">Преимущества</a>
               </li>
               <li class="menu__list-item">
-                <a href="#">Направления</a>
+                <a href="#booking">Направления</a>
               </li>
               <li class="menu__list-item menu__list-item--catalog">
-                <a href="#">Ближайшие круизы</a>
+                <a href="#catalog">Ближайшие круизы</a>
               </li>
               <li class="menu__list-item menu__list-item--contacts">
-                <a href="#">Контакты</a>
+                <a href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -61,16 +65,16 @@
               </div>
               <ul class="sidebar__list">
                 <li class="sidebar__list-item">
-                  <a href="#">Преимущества</a>
+                  <a href="#features">Преимущества</a>
                 </li>
                 <li class="sidebar__list-item">
-                  <a href="#">Направления</a>
+                  <a href="#booking">Направления</a>
                 </li>
                 <li class="sidebar__list-item">
-                  <a href="#">Ближайшие круизы</a>
+                  <a href="#catalog">Ближайшие круизы</a>
                 </li>
                 <li class="sidebar__list-item">
-                  <a href="#">Контакты</a>
+                  <a href="#contacts">Контакты</a>
                 </li>
               </ul>
             </div>
@@ -98,7 +102,7 @@
             <source media="(max-width: 1023px)"
               srcset="img/main/main-bg-tablet.jpg 1x, img/main/main-bg-tablet@2x.jpg 2x" width="768" height="638">
             <img src="img/main/main-bg-desktop.jpg" srcset="img/main/main-bg-desktop@2x.jpg 2x"
-              alt="Застеженные горы на фоне воды" width="1366" height="650">
+              alt="Застеженные горы на фоне воды." width="1366" height="650">
           </picture>
         </div>
       </div>
@@ -107,20 +111,21 @@
         <div class="intro__container container">
           <div class="intro__wrapper">
             <h2 class="intro__title">Путешествие<br>на край Земли</h2>
-            <p class="intro__text">Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром
-              Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги,
+            <p class="intro__text">Это волшебное путешествие поможет вам познакомиться поближе<br> с удивительным миром
+              Антарктики. Наш круизный лайнер отвезет вас<br> на край Земли, где вы сможете увидеть: ледяные
+              айсберги,<br>
               несколько видов пингвинов, китов, морских котиков и многое другое.</p>
           </div>
           <div class="intro__img">
             <picture>
               <source type="image/webp" srcset="img/intro.webp 1x, img/intro@2x.webp 2x">
-              <img src="img/intro.jpg" srcset="img/intro@2x.jpg 2x" alt="Три пингвина" width="560" height="301">
+              <img src="img/intro.jpg" srcset="img/intro@2x.jpg 2x" alt="Три пингвина." width="560" height="301">
             </picture>
           </div>
         </div>
       </section>
 
-      <section class="features">
+      <section class="features" id="features">
         <div class="features__wrapper">
           <div class="container">
             <h2 class="features__title">Преимущества</h2>
@@ -129,7 +134,7 @@
                 <svg width="27" height="32" viewBox="0 0 27 32">
                   <use xlink:href="img/sprite.svg#ship"></use>
                 </svg>
-                <h3>Небольшой<br>круизный лайнер</h3>
+                <h3>Небольшой<br class="features__br-title"> круизный лайнер</h3>
                 <p>
                   Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума
                   и&nbsp;очередей&nbsp;и&nbsp;даст возможность насладиться видами и&nbsp;природой.
@@ -139,17 +144,17 @@
                 <svg width="38" height="32" viewBox="0 0 38 32">
                   <use xlink:href="img/sprite.svg#check-mark"></use>
                 </svg>
-                <h3>Система<br>все включено</h3>
+                <h3>Система<br class="features__br-title"> все включено</h3>
                 <p>
-                  Все наши круизы работают по системе &laquo;Все Включено&raquo;. Великолепные блюда
-                  и&nbsp;безлимитный бар доступны&nbsp;для вас 24&nbsp;часа.
+                  Все наши круизы работают по<br class="features__br-desktop"> системе &laquo;Все Включено&raquo;. Великолепные блюда
+                  и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
                 </p>
               </li>
               <li class="features__item boat">
                 <svg width="44" height="32" viewBox="0 0 44 32">
                   <use xlink:href="img/sprite.svg#boat"></use>
                 </svg>
-                <h3>Экскурсионные<br>туры на Zodiac</h3>
+                <h3>Экскурсионные<br class="features__br-title"> туры на Zodiac</h3>
                 <p>
                   Экскурсионные туры к&nbsp;берегам Антарктиды совершаются&nbsp;на оборудованных лодках типа
                   Zodiac&nbsp;c опытными экскурсоводами.
@@ -160,14 +165,14 @@
           <div class="features__bg bg-img">
             <picture>
               <source type="image/webp" srcset="img/features-bg.webp 1x, img/features-bg@2x.webp 2x">
-              <img src="img/features-bg.jpg" srcset="img/features-bg@2x.jpg 2x" alt="Горы в снегу" width="1366"
+              <img src="img/features-bg.jpg" srcset="img/features-bg@2x.jpg 2x" alt="Горы в снегу." width="1366"
                 height="562">
             </picture>
           </div>
         </div>
       </section>
 
-      <section class="catalog">
+      <section class="catalog" id="catalog">
         <div class="catalog__container container">
           <h2>Ближайшие круизы</h2>
           <ul class="catalog__list">
@@ -176,8 +181,8 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/astoria.webp 1x, img/catalog/astoria@2x.webp 2x">
-                  <img src="img/catalog/astoria.jpg" srcset="img/catalog/astoria@2x.jpg" alt="" width="260"
-                    height="386">
+                  <img src="img/catalog/astoria.jpg" srcset="img/catalog/astoria@2x.jpg" alt="Гора. Замёрзший водоём."
+                    width="260" height="386">
                 </picture>
               </div>
               <div class="catalog__content">
@@ -208,8 +213,8 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/minion-1.webp 1x, img/catalog/minion-1@2x.webp 2x">
-                  <img src="img/catalog/minion-1.jpg" srcset="img/catalog/minion-1@2x.jpg" alt="" width="260"
-                    height="386">
+                  <img src="img/catalog/minion-1.jpg" srcset="img/catalog/minion-1@2x.jpg"
+                    alt="Группа людей спускается к воде." width="260" height="386">
                 </picture>
               </div>
               <div class="catalog__content">
@@ -238,7 +243,7 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/atlantis.webp 1x, img/catalog/atlantis@2x.webp 2x">
-                  <img src="img/catalog/atlantis.jpg" srcset="img/catalog/atlantis@2x.jpg" alt="" width="260"
+                  <img src="img/catalog/atlantis.jpg" srcset="img/catalog/atlantis@2x.jpg" alt="Ледники." width="260"
                     height="386">
                 </picture>
               </div>
@@ -268,8 +273,8 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/odyssey.webp 1x, img/catalog/odyssey@2x.webp 2x">
-                  <img src="img/catalog/odyssey.jpg" srcset="img/catalog/odyssey@2x.jpg" alt="" width="260"
-                    height="386">
+                  <img src="img/catalog/odyssey.jpg" srcset="img/catalog/odyssey@2x.jpg" alt="Застеженные горы. Водоём."
+                    width="260" height="386">
                 </picture>
               </div>
               <div class="catalog__content">
@@ -298,7 +303,7 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/olimpiya.webp 1x, img/catalog/olimpiya@2x.webp 2x">
-                  <img src="img/catalog/olimpiya.jpg" srcset="img/catalog/olimpiya@2x.jpg" alt="" width="260"
+                  <img src="img/catalog/olimpiya.jpg" srcset="img/catalog/olimpiya@2x.jpg" alt="Пингвины." width="260"
                     height="386">
                 </picture>
               </div>
@@ -328,7 +333,8 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/aurora.webp 1x, img/catalog/aurora@2x.webp 2x">
-                  <img src="img/catalog/aurora.jpg" srcset="img/catalog/aurora@2x.jpg" alt="" width="260" height="386">
+                  <img src="img/catalog/aurora.jpg" srcset="img/catalog/aurora@2x.jpg" alt="Люди у подножья горы."
+                    width="260" height="386">
                 </picture>
               </div>
               <div class="catalog__content">
@@ -357,7 +363,8 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/leonor.webp 1x, img/catalog/leonor@2x.webp 2x">
-                  <img src="img/catalog/leonor.jpg" srcset="img/catalog/leonor@2x.jpg" alt="" width="260" height="386">
+                  <img src="img/catalog/leonor.jpg" srcset="img/catalog/leonor@2x.jpg" alt="Лодка на воде." width="260"
+                    height="386">
                 </picture>
               </div>
               <div class="catalog__content">
@@ -386,8 +393,8 @@
               <div class="catalog__img">
                 <picture>
                   <source type="image/webp" srcset="img/catalog/minion-1.webp 1x, img/catalog/minion-1@2x.webp 2x">
-                  <img src="img/catalog/minion-1.jpg" srcset="img/catalog/minion-1@2x.jpg" alt="" width="260"
-                    height="386">
+                  <img src="img/catalog/minion-1.jpg" srcset="img/catalog/minion-1@2x.jpg"
+                    alt="Группа людей спускается к воде." width="260" height="386">
                 </picture>
               </div>
               <div class="catalog__content">
@@ -415,15 +422,16 @@
         </div>
       </section>
 
-      <section class="booking">
+      <section class="booking" id="booking">
         <div class="booking__wrapper">
           <div class="booking__container container">
             <div class="booking__content">
               <h2>Раннее бронирование</h2>
-              <p>Забронируйте тур за&nbsp;3-6 месяцев<br> до даты выезда и сэкономьте до 50%</p>
+              <p>Забронируйте тур<br class="booking__br-mobile"> за 3-6 месяцев<br class="booking__br-tablet"> до даты выезда<br class="booking__br-mobile"> и сэкономьте до 50%</p>
             </div>
             <form class="booking__form" action="https://echo.htmlacademy.ru" method="post">
-              <h2>Оставьте заявку&nbsp;и мы свяжемся с вами в ближайшее время</h2>
+              <h2>Оставьте заявку<br class="booking__br-mobile"> и мы свяжемся<br class="booking__br-tablet"> с вами<br
+                  class="booking__br-mobile"> в ближайшее время</h2>
               <div class="booking__form-wrapper">
                 <div class="form__field name">
                   <label>
@@ -444,7 +452,7 @@
                   <input name="agree" type="checkbox" id="agree" required checked>
                   <span></span>
                   <label for="agree">
-                    Я согласен на обработку<br>моих персональных данных
+                    Я согласен на обработку моих персональных данных
                   </label>
                 </div>
                 <button type="submit">Оставить заявку</button>
@@ -474,7 +482,7 @@
         </div>
       </section>
 
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__container container">
           <div class="contacts__map">
             <iframe
@@ -484,20 +492,20 @@
           </div>
           <div class="contacts__wrapper">
             <h2 class="contacts__title">
-              У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.
+              У вас ещё остались вопросы или сомнения? Приезжайте<br> к нам в офис и мы вам все расскажем.
             </h2>
-            <a class="contacts__address">
+            <span class="contacts__address">
               <svg width="18" height="22" viewBox="0 0 18 22">
                 <use xlink:href="img/sprite.svg#map-pin"></use>
               </svg>
               <span>г. Санкт Петербург,<br>ул. Большая Конюшенная, 19/8</span>
-            </a>
-            <a class="contacts__tel">
+            </span>
+            <span class="contacts__tel">
               <svg width="18" height="18" viewBox="0 0 18 18">
                 <use xlink:href="img/sprite.svg#phone"></use>
               </svg>
-              <span>8-800-200-00-00</span>
-            </a>
+              <a href="tel:8-800-200-00-00">8-800-200-00-00</a>
+            </span>
           </div>
         </div>
       </section>

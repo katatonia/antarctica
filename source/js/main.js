@@ -2,8 +2,6 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {showSidebar} from './modules/sidebar';
 import {onFormSubmit} from './modules/form';
-import {scrollOnMenuBtn} from './modules/scroll-to';
-
 
 // ---------------------------------
 
@@ -16,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   showSidebar();
   onFormSubmit();
-  scrollOnMenuBtn();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
