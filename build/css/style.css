@@ -942,7 +942,7 @@ button,
 .sidebar__logo {
   width: 42px;
   height: 22px;
-  fill: #011C40;
+  fill: #011c40;
   cursor: pointer;
 }
 
@@ -980,7 +980,7 @@ button,
   font-family: "Montserrat Medium", "Arial", sans-serif;
   font-size: 18px;
   line-height: 22px;
-  color: #011C40;
+  color: #011c40;
 }
 
 .sidebar__list-item a.focus-visible:focus {
@@ -1004,7 +1004,7 @@ button,
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .main__title {
@@ -1042,17 +1042,21 @@ button,
   padding: 58px 25px 0 20px;
 }
 
-.intro__title {
+.intro__wrapper h2 {
   font-family: "Montserrat Semi Bold", "Arial", sans-serif;
   font-size: 28px;
   line-height: 42px;
-  color: #011C40;
+  color: #011c40;
   margin: 0;
   padding: 0 0 24px 0;
   cursor: default;
 }
 
-.intro__text {
+.intro__wrapper h2 br {
+  display: none;
+}
+
+.intro__wrapper p {
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -1078,7 +1082,7 @@ button,
   font-family: "Montserrat Semi Bold", "Arial", sans-serif;
   font-size: 28px;
   line-height: 42px;
-  color: #011C40;
+  color: #011c40;
   margin: 0;
   text-align: center;
   padding-bottom: 50px;
@@ -1105,17 +1109,21 @@ button,
   font-family: "Montserrat Medium", "Arial", sans-serif;
   font-size: 18px;
   line-height: 27px;
-  color: #011C40;
+  color: #011c40;
   padding: 10px 0 10px;
   margin: 0;
   cursor: default;
+}
+
+.features__item h3 br {
+  display: none;
 }
 
 .features__item p {
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #011C40;
+  color: #011c40;
   margin: 0;
   padding: 0;
   cursor: default;
@@ -1148,7 +1156,143 @@ button,
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
+}
+
+.catalog__container {
+  margin-top: 75px;
+  margin-bottom: 120px;
+}
+
+.catalog h2 {
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-size: 28px;
+  line-height: 62px;
+  color: #011c40;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 39px;
+}
+
+.catalog__list {
+  margin: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.catalog__list-item {
+  position: relative;
+  height: 386px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.catalog__list-item:hover .catalog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.catalog__list-item:hover h3 {
+  display: none;
+}
+
+.catalog__content {
+  position: absolute;
+  top: 0;
+  background-color: #011c40;
+  width: 100%;
+  height: 386px;
+  padding: 30px 25px 35px;
+  display: none;
+}
+
+.catalog__content-wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.catalog__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #e3ecf6;
+}
+
+.catalog__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.catalog__list-item h3 {
+  position: absolute;
+  z-index: 1;
+  padding: 0 0 0 30px;
+  bottom: 23px;
+}
+
+.catalog__list-item h3,
+.catalog__content h4 {
+  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.catalog__line {
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  padding-top: 14px;
+}
+
+.catalog__line h5 {
+  font-family: "Montserrat Medium", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__line p {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__content a {
+  display: block;
+  width: 100%;
+  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #011c40;
+  background-color: #ffffff;
+  margin-top: auto;
+  padding: 10px 0;
 }
 
 .booking__wrapper {
@@ -1164,6 +1308,7 @@ button,
   grid-template-columns: 1fr 400px;
   grid-template-areas: "content form";
   grid-column-gap: 140px;
+  padding: 0 80px;
 }
 
 .booking__content {
@@ -1180,14 +1325,15 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding-bottom: 7px;
 }
 
 .booking__content h2 {
   font-family: "Montserrat Bold", "Arial", sans-serif;
   font-size: 40px;
   line-height: 60px;
-  color: #011C40;
-  padding: 0;
+  color: #011c40;
+  padding: 0 0 10px 0;
   margin: 0;
 }
 
@@ -1195,9 +1341,13 @@ button,
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 18px;
   line-height: 27px;
-  color: #011C40;
+  color: #011c40;
   padding: 0;
   margin: 0;
+}
+
+.booking__content p br {
+  display: none;
 }
 
 .booking__bg {
@@ -1207,7 +1357,7 @@ button,
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-color: #E3ECF6;
+  background-color: #e3ecf6;
 }
 
 form {
@@ -1224,8 +1374,8 @@ form {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #011C40;
-  padding: 50px;
+  background-color: #011c40;
+  padding: 40px 40px 50px;
 }
 
 form h2 {
@@ -1233,14 +1383,13 @@ form h2 {
   font-size: 18px;
   line-height: 27px;
   color: #ffffff;
-  padding: 0;
-  margin: 0 0 35px 0;
-  text-align: center;
+  margin: 0 0 28px;
+  padding: 4px 0 0;
 }
 
 .form__field {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border-color: #ffffff;
 }
 
@@ -1298,6 +1447,7 @@ form h2 {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin-bottom: 33px;
 }
 
 .form__field.agree label {
@@ -1334,11 +1484,11 @@ form button {
   font-family: "Montserrat Semi Bold", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
-  color: #011C40;
+  color: #011c40;
   width: 100%;
   background-color: #ffffff;
   border: none;
-  padding: 15px 0;
+  padding: 12px 0;
   cursor: pointer;
 }
 
@@ -1350,9 +1500,9 @@ form button.focus-visible:focus {
   display: -ms-grid;
   display: grid;
   grid-template-areas: "map address";
-  -ms-grid-columns: 1fr 100px 1fr;
+  -ms-grid-columns: 1fr 40px 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 100px;
+  grid-gap: 40px;
   margin-top: 120px;
   margin-bottom: 120px;
 }
@@ -1386,14 +1536,14 @@ form button.focus-visible:focus {
   -ms-flex-direction: column;
   flex-direction: column;
   grid-area: address;
-  padding-top: 75px;
+  padding: 75px 0 0 60px;
 }
 
 .contacts__title {
   font-font: "Montserrat Medium", "Arial", sans-serif;
   font-size: 18px;
   line-height: 27px;
-  color: #011C40;
+  color: #011c40;
   margin: 0 0 28px;
   cursor: default;
 }
@@ -1402,9 +1552,14 @@ form button.focus-visible:focus {
   font-family: "Montserrat Regular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #011C40;
   cursor: pointer;
   padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .contacts a.focus-visible:focus {
@@ -1412,12 +1567,16 @@ form button.focus-visible:focus {
 }
 
 .contacts a span {
-  padding-left: 6px;
+  padding-left: 10px;
+}
+
+.contacts__address span br {
+  display: none;
 }
 
 .footer {
   min-height: 138px;
-  background-color: #011C40;
+  background-color: #011c40;
 }
 
 .footer__container {
@@ -1485,10 +1644,10 @@ form button.focus-visible:focus {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 27px;
+  gap: 33px;
   list-style: none;
   margin: 0;
-  padding: 10px 0 0;
+  padding: 4px 8px 0 0;
 }
 
 .footer__accounts-item {
@@ -1592,7 +1751,7 @@ form button.focus-visible:focus {
   }
 
   .main__container {
-    padding-left: 20px;
+    padding-left: 45px;
   }
 
   .main__wrapper {
@@ -1618,9 +1777,13 @@ form button.focus-visible:focus {
     padding: 0;
   }
 
-  .intro__title {
+  .intro__wrapper h2 {
     font-size: 26px;
     line-height: 36px;
+  }
+
+  .intro__wrapper h2 br {
+    display: block;
   }
 
   .features__title {
@@ -1639,6 +1802,10 @@ form button.focus-visible:focus {
   .features__item h3 {
     font-size: 18px;
     line-height: 25px;
+  }
+
+  .features__item h3 br {
+    display: block;
   }
 
   .features__item.ship svg {
@@ -1661,8 +1828,26 @@ form button.focus-visible:focus {
     padding-bottom: 100px;
   }
 
+  .catalog__container {
+    margin-top: 77px;
+    margin-bottom: 100px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: (309px)[2];
+    grid-template-columns: repeat(2, 309px);
+  }
+
+  .catalog__content {
+    padding: 30px 35px 35px;
+  }
+
+  .catalog__list-item h3 {
+    bottom: 27px;
+  }
+
   .booking__wrapper {
-    padding-top: 100px;
+    padding-top: 87px;
     padding-bottom: 100px;
   }
 
@@ -1676,11 +1861,21 @@ form button.focus-visible:focus {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
+  }
+
+  .booking__content h2 {
+    font-size: 34px;
+    line-height: 51px;
+    padding: 0 0 5px 0;
   }
 
   .booking__content p {
     text-align: center;
+  }
+
+  .booking__content p br {
+    display: block;
   }
 
   .booking__content {
@@ -1698,8 +1893,14 @@ form button.focus-visible:focus {
     margin: 0 auto;
   }
 
+  form h2 {
+    text-align: center;
+  }
+
   .contacts__container {
     grid-gap: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .contacts__map iframe {
@@ -1708,6 +1909,19 @@ form button.focus-visible:focus {
 
   .contacts__wrapper {
     padding: 0;
+  }
+
+  .contacts__title {
+    padding: 65px 0 25px;
+    margin: 0;
+  }
+
+  .contacts__address span br {
+    display: block;
+  }
+
+  .footer__container {
+    padding: 30px 45px;
   }
 
   .footer__logo {
@@ -1720,9 +1934,19 @@ form button.focus-visible:focus {
     height: 20px;
   }
 
+  .footer-menu {
+    margin-left: 23px;
+    gap: 23px;
+  }
+
   .footer-menu__item a {
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .footer__accounts {
+    padding: 0;
+    gap: 24px;
   }
 
   .footer__accounts-item {
@@ -1808,7 +2032,7 @@ form button.focus-visible:focus {
   .menu__list-item a {
     font-size: 18px;
     line-height: 22px;
-    color: #011C40;
+    color: #011c40;
   }
 
   .menu__toggle {
@@ -1879,7 +2103,7 @@ form button.focus-visible:focus {
     padding: 0 0 43px 0;
   }
 
-  .intro__title {
+  .intro__wrapper h2 {
     font-size: 23px;
     line-height: 33px;
     padding: 0 0 16px 0;
@@ -1902,15 +2126,53 @@ form button.focus-visible:focus {
     grid-template-columns: 1fr;
   }
 
+  .features__item {
+    padding: 27px 22px 20px 20px;
+  }
+
   .features__wrapper {
     padding-top: 57px;
-    padding-bottom: 100px;
+    padding-bottom: 67px;
+  }
+
+  .catalog__container {
+    margin-top: 55px;
+    margin-bottom: 67px;
+  }
+
+  .catalog h2 {
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 30px;
+  }
+
+  .catalog__list {
+    -ms-grid-columns: (270px)[1];
+    grid-template-columns: repeat(1, 270px);
+  }
+
+  .catalog__content {
+    padding: 30px 25px 35px;
+  }
+
+  .catalog__list-item h3 {
+    bottom: 15px;
+    padding: 0 0 0 23px;
+  }
+
+  .booking__wrapper {
+    padding-top: 58px;
+    padding-bottom: 65px;
+  }
+
+  .booking__content {
+    margin-bottom: 30px;
   }
 
   .booking__content h2 {
     font-size: 24px;
     line-height: 31px;
-    padding-bottom: 25px;
+    padding-bottom: 13px;
     text-align: center;
   }
 
@@ -1919,16 +2181,47 @@ form button.focus-visible:focus {
     line-height: 22px;
   }
 
+  .booking__content p br {
+    display: none;
+  }
+
   form {
     width: 290px;
-    padding: 40px 30px;
+    padding: 30px 30px 40px;
+  }
+
+  form h2 {
+    line-height: 25px;
+  }
+
+  .form__field.agree {
+    margin-bottom: 23px;
+  }
+
+  .form__field.agree label {
+    padding-left: 2.8em;
+  }
+
+  .form__field.agree input {
+    width: 20px;
+    height: 20px;
+  }
+
+  .form__field.agree span {
+    width: 20px;
+    height: 20px;
+    left: 2px;
+    top: -2px;
   }
 
   .contacts__container {
     -ms-grid-columns: minmax(290px, 1fr);
     grid-template-columns: minmax(290px, 1fr);
-    -ms-grid-rows: auto 30px auto;
+    -ms-grid-rows: auto 15px auto;
     grid-template-areas: "address" "map";
+    grid-gap: 15px;
+    margin-top: 0;
+    margin-bottom: 65px;
   }
 
   .contacts__map iframe {
@@ -1945,6 +2238,15 @@ form button.focus-visible:focus {
     -ms-grid-column: 1;
   }
 
+  .contacts__title {
+    padding: 55px 0 30px;
+  }
+
+  .contacts__address svg {
+    position: relative;
+    bottom: 7px;
+  }
+
   .footer__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1953,6 +2255,7 @@ form button.focus-visible:focus {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    padding: 40px 15px;
   }
 
   .footer__logo {
@@ -1960,8 +2263,8 @@ form button.focus-visible:focus {
   }
 
   .footer-menu {
-    margin: 0 0 30px;
-    gap: 23px;
+    margin: 15px 0 0;
+    gap: 8px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1969,7 +2272,8 @@ form button.focus-visible:focus {
   }
 
   .footer__accounts {
-    padding: 0;
+    padding-top: 22px;
+    gap: 22px;
   }
 }
 

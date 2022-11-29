@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas: "map address";
   grid-template-columns: 1fr 1fr;
-  grid-gap: 100px;
+  grid-gap: 40px;
   margin: {
     top: 120px;
     bottom: 120px;
@@ -10,6 +10,10 @@
 
   @media (max-width: $vp-1023) {
     grid-gap: 30px;
+    margin: {
+      top: 100px;
+      bottom: 100px;
+    }
   }
 
   @media (max-width: $vp-767) {
@@ -17,6 +21,11 @@
     grid-template-areas:
       "address"
       "map";
+    grid-gap: 15px;
+    margin: {
+      top: 0;
+      bottom: 65px;
+    }
   }
 }
 
@@ -44,7 +53,7 @@
   display: flex;
   flex-direction: column;
   grid-area: address;
-  padding-top: 75px;
+  padding: 75px 0 0 60px;
 
   @media (max-width: $vp-1023) {
     padding: 0;
@@ -60,6 +69,15 @@
   color: $color-tangaroa;
   margin: 0 0 28px;
   cursor: default;
+
+  @media (max-width: $vp-1023) {
+    padding: 65px 0 25px;
+    margin: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 55px 0 30px;
+  }
 }
 
 .contacts a {
@@ -68,9 +86,10 @@
     size: 16px;
   }
   line-height: 24px;
-  color: $color-tangaroa;
   cursor: pointer;
   padding-bottom: 20px;
+  display: flex;
+  align-items: center;
 
   @include hover-focus {
     fill: $color-school-bus-yellow;
@@ -78,5 +97,20 @@
 }
 
 .contacts a span {
-  padding-left: 6px;
+  padding-left: 10px;
+}
+
+.contacts__address span br {
+  display: none;
+
+  @media (max-width: $vp-1023) {
+    display: block;
+  }
+}
+
+.contacts__address svg {
+  @media (max-width: $vp-767) {
+    position: relative;
+    bottom: 7px;
+  }
 }

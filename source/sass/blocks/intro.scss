@@ -28,7 +28,7 @@
   }
 }
 
-.intro__title {
+.intro__wrapper h2 {
   font: {
     family: $ff-montserrat-semi-bold;
     size: 28px;
@@ -55,7 +55,15 @@
   }
 }
 
-.intro__text {
+.intro__wrapper h2 br {
+  display: none;
+
+  @media (max-width: $vp-1023) {
+    display: block;
+  }
+}
+
+.intro__wrapper p {
   font: {
     family: $ff-montserrat-regular;
     size: 16px;
@@ -71,7 +79,7 @@
   align-items: flex-start;
 
   @media (max-width: $vp-767) {
-   justify-content: center;
+    justify-content: center;
   }
 }
 

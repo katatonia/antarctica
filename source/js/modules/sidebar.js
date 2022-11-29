@@ -1,4 +1,4 @@
-import {createElementsArrow} from '../../utils/util';
+import {createElementsArrow} from '../utils/util';
 
 const header = document.querySelector('header');
 const headerContainer = header.querySelector('.header__container');
