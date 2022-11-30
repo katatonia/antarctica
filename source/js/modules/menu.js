@@ -17,7 +17,7 @@ const removeClass = (arr) => {
 };
 
 const showMenu = () => {
-  if (burger) {
+  if (burger && header && headerMenu && menuNav && headerLogo & mainContainer && iconClose && intro) {
     removeClass(createElementsArrow(noJsArrow));
 
     burger.addEventListener('click', () => {
@@ -32,7 +32,7 @@ const showMenu = () => {
     });
   }
 
-  if (iconClose) {
+  if (iconClose && header && headerMenu && menuNav && burger && headerLogo && mainContainer && intro) {
     iconClose.addEventListener('click', () => {
       header.classList.remove('opened');
       headerMenu.classList.remove('opened');
