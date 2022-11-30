@@ -1,8 +1,8 @@
 .main {
   &.no-js {
     @media (max-width: $vp-767) {
-      position: absolute;
-      top: 300px;
+      position: relative;
+      top: 568px;
       width: 100%;
     }
   }

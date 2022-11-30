@@ -1,4 +1,15 @@
 .menu__nav {
+  &.opened {
+    display: block;
+    position: absolute;
+    top: 87px;
+    left: 26px;
+  }
+
+  &.no-js {
+    display: block;
+  }
+
   @media (max-width: $vp-767) {
     display: none;
   }
@@ -52,18 +63,34 @@
 
 .menu__toggle {
   display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  stroke: $color-default-white;
+  padding: 0;
 
   @include hover-focus {
     stroke: $color-school-bus-yellow;
   }
 
-  @media (max-width: $vp-767) {
-    display: block;
-    background-color: transparent;
-    border: none;
-    stroke: $color-default-white;
-    padding: 0;
-    cursor: pointer;
-    z-index: 2;
+  &.no-js {
+    display: none;
+  }
+
+  &--burger {
+    @media (max-width: $vp-767) {
+      display: block;
+    }
+  }
+
+  &--icon-close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+
+    @include hover-focus {
+      stroke: $color-school-bus-yellow;
+    }
   }
 }

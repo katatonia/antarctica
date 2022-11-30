@@ -17,19 +17,24 @@
 <body>
   <div class="wrapper">
     <header class="header no-js">
-      <div class="header__container container no-js">
-        <a class="header__logo" href="#">
+      <div class="header__container no-js container">
+        <a class="header__logo no-js" href="#">
           <svg width="70" height="38" viewBox="0 0 70 38">
             <use xlink:href="img/sprite.svg#logo"></use>
           </svg>
         </a>
-        <div class="header__menu menu">
-          <button class="menu__toggle">
+        <div class="header__menu no-js menu">
+          <button class="menu__toggle no-js menu__toggle--burger">
             <svg width="24" height="22" viewBox="0 0 24 22">
               <use xlink:href="img/sprite.svg#burger"></use>
             </svg>
           </button>
-          <nav class="menu__nav">
+          <button class="menu__toggle no-js menu__toggle--icon-close">
+            <svg width="13" height="25" viewBox="0 0 13 25">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="menu__nav no-js">
             <ul class="menu__list">
               <li class="menu__list-item">
                 <a href="#features">Преимущества</a>
@@ -47,43 +52,9 @@
           </nav>
         </div>
       </div>
-      <div class="sidebar no-js">
-        <aside class="sidebar__aside no-js">
-          <div class="sidebar__container no-js">
-            <div class="sidebar__wrapper">
-              <div class="sidebar__icons">
-                <a class="sidebar__logo" href="#">
-                  <svg width="42" height="22" viewBox="0 0 42 22">
-                    <use xlink:href="img/sprite.svg#logo"></use>
-                  </svg>
-                </a>
-                <button class="sidebar__toggle no-js">
-                  <svg width="13" height="25" viewBox="0 0 13 25">
-                    <use xlink:href="img/sprite.svg#icon-close"></use>
-                  </svg>
-                </button>
-              </div>
-              <ul class="sidebar__list">
-                <li class="sidebar__list-item">
-                  <a href="#features">Преимущества</a>
-                </li>
-                <li class="sidebar__list-item">
-                  <a href="#booking">Направления</a>
-                </li>
-                <li class="sidebar__list-item">
-                  <a href="#catalog">Ближайшие круизы</a>
-                </li>
-                <li class="sidebar__list-item">
-                  <a href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </aside>
-      </div>
     </header>
 
-    <main class="main no-js">
+    <main class="main">
       <div class="main__wrapper">
         <div class="main__container container">
           <h1 class="main__title">Круизы в&nbsp;Антарктику</h1>
@@ -429,7 +400,7 @@
               <h2>Раннее бронирование</h2>
               <p>Забронируйте тур<br class="booking__br-mobile"> за 3-6 месяцев<br class="booking__br-tablet"> до даты выезда<br class="booking__br-mobile"> и сэкономьте до 50%</p>
             </div>
-            <form class="booking__form" action="https://echo.htmlacademy.ru" method="post">
+            <form class="booking__form form" action="https://echo.htmlacademy.ru" method="post">
               <h2>Оставьте заявку<br class="booking__br-mobile"> и мы свяжемся<br class="booking__br-tablet"> с вами<br
                   class="booking__br-mobile"> в ближайшее время</h2>
               <div class="booking__form-wrapper">
