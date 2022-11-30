@@ -20,23 +20,27 @@
     }
   }
 
-  &.opened {
-    background-color: rgba(0, 43, 102, 0.5);
-    width: 100%;
-    height: 567px;
-    transition: all 0.5s linear 0s;
+  @media (max-width: $vp-767) {
+    &.opened {
+      background-color: rgba(0, 43, 102, 0.5);
+      width: 100%;
+      height: 567px;
+      transition: all 0.5s linear 0s;
+    }
   }
 }
 
 .header__logo {
-  &.opened {
-    position: absolute;
-    left: 55px;
-    z-index: 2;
-  }
+  @media (max-width: $vp-767) {
+    &.opened {
+      position: absolute;
+      left: calc(100% - 260px);
+      z-index: 2;
+    }
 
-  &.opened svg {
-    fill: $color-tangaroa;
+    &.opened svg {
+      fill: $color-tangaroa;
+    }
   }
 
   &.no-js svg {
@@ -89,13 +93,15 @@
   align-items: center;
   justify-content: space-between;
 
-  &.opened {
-    position: absolute;
-    width: 285px;
-    height: 567px;
-    top: 0;
-    right: 0;
-    background-color: $color-default-white;
+  @media (max-width: $vp-767) {
+    &.opened {
+      position: absolute;
+      width: 285px;
+      height: 567px;
+      top: 0;
+      right: 0;
+      background-color: $color-default-white;
+    }
   }
 
   &.no-js {

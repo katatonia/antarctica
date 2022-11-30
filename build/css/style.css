@@ -811,25 +811,6 @@ button,
   z-index: 1;
 }
 
-.header.opened {
-  background-color: rgba(0, 43, 102, 0.5);
-  width: 100%;
-  height: 567px;
-  -webkit-transition: all 0.5s linear 0s;
-  -o-transition: all 0.5s linear 0s;
-  transition: all 0.5s linear 0s;
-}
-
-.header__logo.opened {
-  position: absolute;
-  left: 55px;
-  z-index: 2;
-}
-
-.header__logo.opened svg {
-  fill: #011c40;
-}
-
 .header__logo svg {
   fill: #ffffff;
 }
@@ -862,15 +843,6 @@ button,
   justify-content: space-between;
 }
 
-.header__menu.opened {
-  position: absolute;
-  width: 285px;
-  height: 567px;
-  top: 0;
-  right: 0;
-  background-color: #ffffff;
-}
-
 .header__menu.opened .menu__logo {
   display: block;
   position: absolute;
@@ -878,11 +850,12 @@ button,
   left: 15px;
 }
 
-.menu__nav.opened {
-  display: block;
-  position: absolute;
-  top: 87px;
-  left: 26px;
+.menu__logo {
+  display: none;
+}
+
+.menu__logo.focus-visible:focus {
+  fill: #ffd801;
 }
 
 .menu__nav.no-js {
@@ -914,30 +887,16 @@ button,
 }
 
 .menu__toggle {
-  display: none;
   cursor: pointer;
   background-color: transparent;
   border: none;
   stroke: #ffffff;
   padding: 0;
+  display: none;
+  visibility: hidden;
 }
 
 .menu__toggle.focus-visible:focus {
-  stroke: #ffd801;
-}
-
-.menu__toggle.no-js {
-  display: none;
-}
-
-.menu__toggle--icon-close {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 15px;
-}
-
-.menu__toggle--icon-close.focus-visible:focus {
   stroke: #ffd801;
 }
 
@@ -1551,6 +1510,15 @@ form button.focus-visible:focus {
   display: none;
 }
 
+.contacts__address {
+  padding-bottom: 20px;
+}
+
+.contacts__address span,
+.contacts__tel a {
+  padding-left: 10px;
+}
+
 .contacts__address,
 .contacts__tel {
   display: -webkit-box;
@@ -1918,15 +1886,6 @@ form button.focus-visible:focus {
     display: block;
   }
 
-  .contacts__address {
-    padding-bottom: 20px;
-  }
-
-  .contacts__address span,
-  .contacts__tel a {
-    padding-left: 10px;
-  }
-
   .contacts__address svg,
   .contacts__tel svg {
     position: relative;
@@ -2012,6 +1971,25 @@ form button.focus-visible:focus {
     padding-bottom: 20px;
   }
 
+  .header.opened {
+    background-color: rgba(0, 43, 102, 0.5);
+    width: 100%;
+    height: 567px;
+    -webkit-transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+    transition: all 0.5s linear 0s;
+  }
+
+  .header__logo.opened {
+    position: absolute;
+    left: calc(100% - 260px);
+    z-index: 2;
+  }
+
+  .header__logo.opened svg {
+    fill: #011c40;
+  }
+
   .header__logo.no-js svg {
     fill: #011c40;
   }
@@ -2027,6 +2005,15 @@ form button.focus-visible:focus {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .header__menu.opened {
+    position: absolute;
+    width: 285px;
+    height: 567px;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
   }
 
   .header__menu.no-js {
@@ -2046,6 +2033,13 @@ form button.focus-visible:focus {
     justify-content: center;
   }
 
+  .menu__nav.opened {
+    display: block;
+    position: absolute;
+    top: 87px;
+    left: 26px;
+  }
+
   .menu__nav {
     display: none;
   }
@@ -2063,8 +2057,18 @@ form button.focus-visible:focus {
     color: #011c40;
   }
 
+  .menu__toggle {
+    visibility: visible;
+  }
+
   .menu__toggle--burger {
     display: block;
+  }
+
+  .menu__toggle--icon-close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
   }
 
   .main.no-js {
@@ -2305,15 +2309,15 @@ form button.focus-visible:focus {
     fill: #ffd801;
   }
 
+  .menu__logo:hover:not(.focus-visible) {
+    fill: #ffd801;
+  }
+
   .menu__list-item a:hover:not(.focus-visible) {
     color: #ffd801;
   }
 
   .menu__toggle:hover:not(.focus-visible) {
-    stroke: #ffd801;
-  }
-
-  .menu__toggle--icon-close:hover:not(.focus-visible) {
     stroke: #ffd801;
   }
 

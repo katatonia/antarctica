@@ -113,16 +113,12 @@
 }
 
 .contacts__address {
-  @media (max-width: $vp-1023) {
-    padding-bottom: 20px;
-  }
+  padding-bottom: 20px;
 }
 
 .contacts__address span,
 .contacts__tel a {
-  @media (max-width: $vp-1023) {
-    padding-left: 10px;
-  }
+  padding-left: 10px;
 }
 
 .contacts__address,
