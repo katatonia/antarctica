@@ -1222,6 +1222,10 @@ button,
   padding: 10px 0;
 }
 
+.catalog__content a.focus-visible:focus {
+  color: #ffd801;
+}
+
 .booking__wrapper {
   position: relative;
   padding-top: 50px;
@@ -2336,6 +2340,10 @@ form button.focus-visible:focus {
 
   .menu__toggle:hover:not(.focus-visible) {
     stroke: #ffd801;
+  }
+
+  .catalog__content a:hover:not(.focus-visible) {
+    color: #ffd801;
   }
 
   .form__field:hover:not(.focus-visible) {

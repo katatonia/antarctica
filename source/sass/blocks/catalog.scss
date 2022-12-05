@@ -177,4 +177,8 @@
   background-color: $color-default-white;
   margin-top: auto;
   padding: 10px 0;
+
+  @include hover-focus {
+    color: $color-school-bus-yellow;
+  }
 }

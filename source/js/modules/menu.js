@@ -19,7 +19,7 @@ const removeClass = (arr) => {
   });
 };
 
-const showIconClose = () => {
+const openMenu = () => {
   burger.style.display = 'none';
   iconClose.style.display = 'block';
   header.classList.add('opened');
@@ -29,9 +29,10 @@ const showIconClose = () => {
   mainContainer.style.visibility = 'hidden';
   intro.style.marginTop = '112px';
   headerOverlay.classList.add('opened');
+  body.style.overflow = 'hidden';
 };
 
-const showBurger = () => {
+const closeMenu = () => {
   burger.style.display = 'block';
   iconClose.style.display = 'none';
   header.classList.remove('opened');
@@ -41,19 +42,20 @@ const showBurger = () => {
   mainContainer.style.visibility = 'visible';
   intro.style.marginTop = '0';
   headerOverlay.classList.remove('opened');
+  body.style.overflow = 'overlay';
 };
 
 const onLinkClick = () => {
   createElementsArrow(menuItemArrow).forEach((e) => {
     e.addEventListener('click', () => {
-      showBurger();
+      closeMenu();
     });
   });
 };
 
 const onOverlayClick = () => {
   headerOverlay.addEventListener('click', () => {
-    showBurger();
+    closeMenu();
   });
 };
 
@@ -62,23 +64,18 @@ const showMenu = () => {
     removeClass(createElementsArrow(noJsArrow));
 
     burger.addEventListener('click', () => {
-      showIconClose();
+      openMenu();
     });
   }
 
   if (iconClose && header && headerMenu && menuNav && burger && headerLogo && mainContainer && iconClose && intro) {
-    if (headerOverlay.classList.contains('opened')) {
-      body.style.overflow = 'hidden';
-    }
-
     iconClose.addEventListener('click', () => {
-      showBurger();
+      closeMenu();
     });
   }
 
   onLinkClick();
   onOverlayClick();
-
 };
 
 export {showMenu};
