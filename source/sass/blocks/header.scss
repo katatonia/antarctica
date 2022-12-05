@@ -24,7 +24,7 @@
     &.opened {
       background-color: rgba(0, 43, 102, 0.5);
       width: 100%;
-      height: 567px;
+      min-height: 567px;
       transition: all 0.5s linear 0s;
     }
   }
@@ -35,7 +35,7 @@
     &.opened {
       position: absolute;
       left: calc(100% - 260px);
-      z-index: 2;
+      z-index: 3;
     }
 
     &.opened svg {
@@ -97,10 +97,12 @@
     &.opened {
       position: absolute;
       width: 285px;
-      height: 567px;
+      min-height: 567px;
       top: 0;
       right: 0;
       background-color: $color-default-white;
+      overflow: auto;
+      z-index: 2;
     }
   }
 
@@ -122,4 +124,20 @@
   position: absolute;
   top: 20px;
   left: 15px;
+}
+
+.header__overlay {
+  display: none;
+
+  &.opened {
+    @media (max-width: $vp-767) {
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      display: block;
+    }
+  }
 }
