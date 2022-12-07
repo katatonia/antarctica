@@ -5,7 +5,7 @@ const burger = document.querySelector('.menu__toggle--burger');
 const iconClose = document.querySelector('.menu__toggle--icon-close');
 const menuItemArrow = document.querySelectorAll('.menu__list-item');
 const header = document.querySelector('.header');
-const headerOverlay = document.querySelector('.header__overlay');
+const overlay = document.querySelector('.overlay');
 const headerMenu = document.querySelector('.header__menu');
 const headerLogo = document.querySelector('.header__logo');
 const menuNav = document.querySelector('.menu__nav');
@@ -28,7 +28,7 @@ const openMenu = () => {
   headerLogo.classList.add('opened');
   mainContainer.style.visibility = 'hidden';
   intro.style.marginTop = '112px';
-  headerOverlay.classList.add('opened');
+  overlay.classList.add('opened');
   body.style.overflow = 'hidden';
 };
 
@@ -41,7 +41,7 @@ const closeMenu = () => {
   headerLogo.classList.remove('opened');
   mainContainer.style.visibility = 'visible';
   intro.style.marginTop = '0';
-  headerOverlay.classList.remove('opened');
+  overlay.classList.remove('opened');
   body.style.overflow = 'overlay';
 };
 
@@ -54,7 +54,7 @@ const onLinkClick = () => {
 };
 
 const onOverlayClick = () => {
-  headerOverlay.addEventListener('click', () => {
+  overlay.addEventListener('click', () => {
     closeMenu();
   });
 };

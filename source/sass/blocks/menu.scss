@@ -39,6 +39,8 @@
 
   @media (max-width: $vp-767) {
     flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
   }
 }
 

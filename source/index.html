@@ -15,44 +15,45 @@
 </head>
 
 <body>
+  <div class="overlay"></div>
   <div class="wrapper">
+    <div></div>
     <header class="header no-js">
-        <div class="header__container no-js container">
-          <a class="header__logo no-js" href="#">
-            <svg width="70" height="38" viewBox="0 0 70 38">
-              <use xlink:href="img/sprite.svg#logo"></use>
+      <div class="header__container no-js container">
+        <a class="header__logo no-js" href="#">
+          <svg width="70" height="38" viewBox="0 0 70 38">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <div class="header__menu no-js menu">
+          <button class="menu__toggle menu__toggle--burger">
+            <svg width="24" height="22" viewBox="0 0 24 22">
+              <use xlink:href="img/sprite.svg#burger"></use>
             </svg>
-          </a>
-          <div class="header__overlay"></div>
-            <div class="header__menu no-js menu">
-              <button class="menu__toggle menu__toggle--burger">
-                <svg width="24" height="22" viewBox="0 0 24 22">
-                  <use xlink:href="img/sprite.svg#burger"></use>
-                </svg>
-              </button>
-              <button class="menu__toggle menu__toggle--icon-close">
-                <svg width="13" height="25" viewBox="0 0 13 25">
-                  <use xlink:href="img/sprite.svg#icon-close"></use>
-                </svg>
-              </button>
-              <nav class="menu__nav no-js">
-                <ul class="menu__list">
-                  <li class="menu__list-item">
-                    <a href="#features">Преимущества</a>
-                  </li>
-                  <li class="menu__list-item">
-                    <a href="#booking">Направления</a>
-                  </li>
-                  <li class="menu__list-item menu__list-item--catalog">
-                    <a href="#catalog">Ближайшие круизы</a>
-                  </li>
-                  <li class="menu__list-item menu__list-item--contacts">
-                    <a href="#contacts">Контакты</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+          </button>
+          <button class="menu__toggle menu__toggle--icon-close">
+            <svg width="13" height="25" viewBox="0 0 13 25">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="menu__nav no-js">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a href="#features">Преимущества</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="#booking">Направления</a>
+              </li>
+              <li class="menu__list-item menu__list-item--catalog">
+                <a href="#catalog">Ближайшие круизы</a>
+              </li>
+              <li class="menu__list-item menu__list-item--contacts">
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
     </header>
 
     <main class="main">
@@ -83,10 +84,9 @@
         <div class="intro__container container">
           <div class="intro__wrapper">
             <h2 class="intro__title">Путешествие<br>на край Земли</h2>
-            <p class="intro__text">Это волшебное путешествие поможет вам познакомиться поближе<br> с удивительным миром
-              Антарктики. Наш круизный лайнер отвезет вас<br> на край Земли, где вы сможете увидеть: ледяные
-              айсберги,<br>
-              несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            <p class="intro__text">Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром
+              Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяныеъ
+              айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
           </div>
           <div class="intro__img">
             <picture>
@@ -118,7 +118,8 @@
                 </svg>
                 <h3>Система<br class="features__br-title"> все включено</h3>
                 <p>
-                  Все наши круизы работают по<br class="features__br-desktop"> системе &laquo;Все Включено&raquo;. Великолепные блюда
+                  Все наши круизы работают по<br class="features__br-desktop"> системе &laquo;Все Включено&raquo;.
+                  Великолепные блюда
                   и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
                 </p>
               </li>
@@ -147,8 +148,8 @@
       <section class="catalog" id="catalog">
         <div class="catalog__container container">
           <h2>Ближайшие круизы</h2>
-          <ul class="catalog__list">
-            <li class="catalog__list-item">
+          <div class="catalog__list">
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Астория"</h3>
               <div class="catalog__img">
                 <picture>
@@ -177,10 +178,10 @@
                     <p>11500 $</p>
                   </div>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-            <li class="catalog__list-item">
+            </div>
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Элайн"</h3>
               <div class="catalog__img">
                 <picture>
@@ -207,10 +208,10 @@
                   <h5>Цена</h5>
                   <p>от 14500 $</p>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-            <li class="catalog__list-item">
+            </div>
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Анлантис"</h3>
               <div class="catalog__img">
                 <picture>
@@ -237,10 +238,10 @@
                   <h5>Цена</h5>
                   <p>от 14500 $</p>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-            <li class="catalog__list-item">
+            </div>
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Одиссей"</h3>
               <div class="catalog__img">
                 <picture>
@@ -267,10 +268,10 @@
                   <h5>Цена</h5>
                   <p>от 9700 $</p>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-            <li class="catalog__list-item">
+            </div>
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Олимпия"</h3>
               <div class="catalog__img">
                 <picture>
@@ -297,10 +298,10 @@
                   <h5>Цена</h5>
                   <p>от 18600 $</p>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-            <li class="catalog__list-item">
+            </div>
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Аврора"</h3>
               <div class="catalog__img">
                 <picture>
@@ -327,10 +328,10 @@
                   <h5>Цена</h5>
                   <p>от 11700 $</p>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-            <li class="catalog__list-item">
+            </div>
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Леонор"</h3>
               <div class="catalog__img">
                 <picture>
@@ -357,10 +358,10 @@
                   <h5>Цена</h5>
                   <p>от 12500 $</p>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-            <li class="catalog__list-item">
+            </div>
+            <div class="catalog__list-item" tabindex="0">
               <h3>Круиз "Минион-1"</h3>
               <div class="catalog__img">
                 <picture>
@@ -387,10 +388,10 @@
                   <h5>Цена</h5>
                   <p>от 12300 $</p>
                 </div>
-                <a href="#">Забронировать</a>
+                <a class="catalog__btn" href="#">Забронировать</a>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -399,7 +400,8 @@
           <div class="booking__container container">
             <div class="booking__content">
               <h2>Раннее бронирование</h2>
-              <p>Забронируйте тур<br class="booking__br-mobile"> за 3-6 месяцев<br class="booking__br-tablet"> до даты выезда<br class="booking__br-mobile"> и сэкономьте до 50%</p>
+              <p>Забронируйте тур<br class="booking__br-mobile"> за 3-6 месяцев<br class="booking__br-tablet"> до даты
+                выезда<br class="booking__br-mobile"> и сэкономьте до 50%</p>
             </div>
             <form class="booking__form form" action="https://echo.htmlacademy.ru" method="post">
               <h2>Оставьте заявку<br class="booking__br-mobile"> и мы свяжемся<br class="booking__br-tablet"> с вами<br

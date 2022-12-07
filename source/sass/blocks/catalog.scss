@@ -30,6 +30,13 @@
   margin: 0;
   padding-bottom: 39px;
 
+
+  @media (max-width: $vp-1023) {
+    font: {
+      size: 26px;
+    }
+  }
+
   @media (max-width: $vp-767) {
     font: {
       size: 24px;
@@ -49,11 +56,11 @@
   padding: 0 15px;
 
   @media (max-width: $vp-1023) {
-    grid-template-columns: repeat(2, 309px);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: $vp-767) {
-    grid-template-columns: repeat(1, 270px);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -62,9 +69,16 @@
   height: 386px;
   display: flex;
   flex-direction: column;
+  border: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
 }
 
-.catalog__list-item:hover .catalog__content {
+.catalog__list-item:hover .catalog__content,
+.catalog__list-item:focus .catalog__content {
   display: flex;
   flex-direction: column;
   z-index: 2;
@@ -82,6 +96,7 @@
   height: 386px;
   padding: 30px 25px 35px;
   display: none;
+  overflow: auto;
 
   @media (max-width: $vp-1023) {
     padding: 30px 35px 35px;
@@ -110,6 +125,14 @@
   width: 100%;
   height: 100%;
   background-color: $color-tangaroa;
+
+   @media (min-width: 768px) {
+    object-fit: cover;
+  }
+
+  @media (min-width: 500px) {
+    object-fit: contain;
+  }
 }
 
 .catalog__list-item h3 {
@@ -164,7 +187,7 @@
   padding: 0;
 }
 
-.catalog__content a {
+.catalog__btn {
   display: block;
   width: 100%;
   font: {

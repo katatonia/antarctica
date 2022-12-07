@@ -76,18 +76,6 @@
   cursor: default;
 }
 
-.intro__text br {
-  display: none;
-
-  @media (max-width: $vp-1023) {
-    display: block;
-  }
-
-  @media (max-width: $vp-767) {
-    display: none;
-  }
-}
-
 .intro__img {
   display: flex;
   align-items: flex-start;

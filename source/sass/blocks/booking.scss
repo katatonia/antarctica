@@ -116,6 +116,11 @@
   }
 }
 
+.booking__form-wrapper {
+  @media (max-width: $vp-767) {
+    width: 100%;
+  }
+}
 
 .booking__bg {
   position: absolute;
