@@ -1679,6 +1679,19 @@ form button.focus-visible:focus {
   }
 */
 
+@media (min-width: 500px) {
+  .catalog__list-item {
+    width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog__list-item {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 45px;
