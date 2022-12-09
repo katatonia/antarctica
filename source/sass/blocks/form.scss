@@ -121,6 +121,7 @@ form .booking__br-mobile {
   @media (max-width: $vp-767) {
     width: 20px;
     height: 20px;
+    top: 3px;
   }
 }
 
@@ -135,7 +136,7 @@ form .booking__br-mobile {
     width: 20px;
     height: 20px;
     left: 2px;
-    top: -2px;
+    top: 3px;
   }
 }
 

@@ -76,6 +76,13 @@ const showMenu = () => {
 
   onLinkClick();
   onOverlayClick();
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) {
+      closeMenu();
+    }
+  });
+
 };
 
 export {showMenu};

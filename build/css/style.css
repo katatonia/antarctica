@@ -1109,7 +1109,8 @@ button,
 
 .catalog__list-item {
   position: relative;
-  height: 386px;
+  width: 100%;
+  min-height: 386px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1127,7 +1128,7 @@ button,
 }
 
 .catalog__list-item:hover .catalog__content,
-.catalog__list-item:focus .catalog__content {
+.catalog__list-item:focus-within .catalog__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1147,7 +1148,7 @@ button,
   top: 0;
   background-color: #011c40;
   width: 100%;
-  height: 386px;
+  height: 100%;
   padding: 30px 25px 35px;
   display: none;
   overflow: auto;
@@ -1160,13 +1161,8 @@ button,
 }
 
 .catalog__img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
   background-color: #e3ecf6;
 }
 
@@ -1503,7 +1499,7 @@ form button.focus-visible:focus {
   font-size: 16px;
   line-height: 24px;
   cursor: pointer;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1682,20 +1678,6 @@ form button.focus-visible:focus {
     }
   }
 */
-
-@media (min-width: 500px) {
-  .catalog__img img {
-    -o-object-fit: contain;
-    object-fit: contain;
-  }
-}
-
-@media (min-width: 768px) {
-  .catalog__img img {
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-}
 
 @media (max-width: 1023px) {
   .container {
@@ -2012,7 +1994,8 @@ form button.focus-visible:focus {
     position: absolute;
     right: 0;
     width: 90vw;
-    min-height: 567px;
+    min-height: 100vh;
+    background-color: white;
   }
 
   .header__logo.opened {
@@ -2043,11 +2026,10 @@ form button.focus-visible:focus {
 
   .header__menu.opened {
     position: absolute;
-    width: 90vw;
+    width: 89vw;
     height: 100vh;
-    top: 0;
+    top: 85px;
     right: 0;
-    background-color: #ffffff;
     overflow: auto;
     z-index: 2;
   }
@@ -2070,9 +2052,10 @@ form button.focus-visible:focus {
   }
 
   .menu__nav.opened {
+    overflow: hidden;
     display: block;
     position: absolute;
-    top: 87px;
+    top: 0;
     left: 26px;
   }
 
@@ -2105,7 +2088,7 @@ form button.focus-visible:focus {
   }
 
   .menu__toggle--icon-close {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 15px;
     display: none;
@@ -2269,13 +2252,14 @@ form button.focus-visible:focus {
   .form__field.agree input {
     width: 20px;
     height: 20px;
+    top: 3px;
   }
 
   .form__field.agree span {
     width: 20px;
     height: 20px;
     left: 2px;
-    top: -2px;
+    top: 3px;
   }
 
   .contacts__container {

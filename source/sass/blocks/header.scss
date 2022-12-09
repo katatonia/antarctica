@@ -25,7 +25,8 @@
       position: absolute;
       right: 0;
       width: 90vw;
-      min-height: 567px;
+      min-height: 100vh;
+      background-color: white;
     }
   }
 }
@@ -95,11 +96,10 @@
   @media (max-width: $vp-767) {
     &.opened {
       position: absolute;
-      width: 90vw;
+      width: 89vw;
       height: 100vh;
-      top: 0;
+      top: 85px;
       right: 0;
-      background-color: $color-default-white;
       overflow: auto;
       z-index: 2;
     }
