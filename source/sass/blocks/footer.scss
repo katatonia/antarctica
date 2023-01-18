@@ -41,7 +41,8 @@
   fill: $color-default-white;
 
   @include hover-focus {
-    fill: $color-school-bus-yellow;
+   filter: drop-shadow(0 0 5px $color-default-white);
+   transition: 0.3s;
   }
 
   @media (max-width: $vp-1023) {
@@ -71,6 +72,13 @@
   }
 }
 
+.footer-menu__item {
+  @include hover-focus {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+}
+
 .footer-menu__item a {
   font: {
     family: $ff-montserrat-medium;
@@ -81,7 +89,8 @@
   cursor: pointer;
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    text-shadow: $color-default-white 0 0 5px;
+    transition: 0.3s;
   }
 
   @media (max-width: $vp-1023) {
@@ -116,10 +125,6 @@
   width: 20px;
   height: 20px;
 
-  @include hover-focus {
-    color: $color-school-bus-yellow;
-  }
-
   @media (max-width: $vp-1023) {
     width: 16px;
     height: 16px;
@@ -153,12 +158,13 @@
   width: 20px;
   height: 20px;
 
-  @include hover-focus {
-    fill: $color-school-bus-yellow;
-  }
-
   @media (max-width: $vp-1023) {
     width: 16px;
     height: 16px;
+  }
+
+  @include hover-focus {
+    filter: drop-shadow(0 0 3px $color-default-white);
+    transition: 0.3s;
   }
 }

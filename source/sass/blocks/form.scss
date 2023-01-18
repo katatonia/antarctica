@@ -69,10 +69,11 @@ form .booking__br-mobile {
 .form__field input {
   width: 100%;
   border: 1px solid transparent;
-  padding: 10px 0 10px 16px;
+  padding: 8px 0 10px 16px;
 
   @include hover-focus {
-    border: 1px solid $color-school-bus-yellow;
+    box-shadow: 0 0 10px $color-default-white;
+    transition: 0.3s;
   }
 }
 
@@ -117,12 +118,7 @@ form .booking__br-mobile {
   position: absolute;
   appearance: none;
   z-index: 1;
-
-  @media (max-width: $vp-767) {
-    width: 20px;
-    height: 20px;
-    top: 3px;
-  }
+  border: none;
 }
 
 .form__field.agree span {
@@ -130,7 +126,6 @@ form .booking__br-mobile {
   width: 18px;
   height: 18px;
   background: url("../img/svg/checkbox-unchecked.svg") 0 0 no-repeat;
-  margin-left: -0.2em;
 
   @media (max-width: $vp-767) {
     width: 20px;
@@ -158,6 +153,7 @@ form button {
   cursor: pointer;
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    box-shadow: 0 0 10px $color-default-white;
+    transition: 0.3s;
   }
 }

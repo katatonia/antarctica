@@ -200,6 +200,7 @@
   padding: 10px 0;
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    box-shadow: 0 0 10px $color-default-white;
+    transition: 0.3s;
   }
 }

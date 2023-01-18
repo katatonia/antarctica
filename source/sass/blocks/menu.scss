@@ -1,9 +1,5 @@
 .menu__logo {
   display: none;
-
-  @include hover-focus {
-    fill: $color-school-bus-yellow;
-  }
 }
 
 .menu__nav {
@@ -45,6 +41,13 @@
   }
 }
 
+.menu__list-item {
+  @include hover-focus {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+}
+
 .menu__list-item a {
   font: {
     family: $ff-montserrat-medium;
@@ -53,9 +56,10 @@
   line-height: 19px;
   color: $color-default-white;
   cursor: pointer;
+  text-align: center;
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    text-shadow: $color-default-white 0 0 5px;
   }
 
   @media (max-width: $vp-1023) {
