@@ -437,8 +437,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  overflow: overlay;
   scroll-behavior: smooth;
+  cursor: default;
 }
 
 html {
@@ -810,6 +810,10 @@ button,
   width: 100%;
   padding-top: 32px;
   z-index: 1;
+}
+
+.header__logo {
+  cursor: default;
 }
 
 .header__logo svg {
@@ -1581,7 +1585,7 @@ form button.focus-visible:focus {
 .footer__logo {
   width: 70px;
   height: 38px;
-  cursor: pointer;
+  cursor: default;
 }
 
 .footer__logo svg {

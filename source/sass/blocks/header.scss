@@ -32,6 +32,8 @@
 }
 
 .header__logo {
+  cursor: default;
+
   @media (max-width: $vp-767) {
     &.opened {
       position: absolute;

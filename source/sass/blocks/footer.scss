@@ -25,7 +25,7 @@
 .footer__logo {
   width: 70px;
   height: 38px;
-  cursor: pointer;
+  cursor: default;
 
   @media (max-width: $vp-1023) {
     width: 38px;

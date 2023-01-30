@@ -27,7 +27,6 @@ const openMenu = () => {
   menuNav.classList.add('opened');
   headerLogo.classList.add('opened');
   mainContainer.style.visibility = 'hidden';
-  intro.style.marginTop = '112px';
   overlay.classList.add('opened');
   body.style.overflow = 'hidden';
 };
@@ -40,7 +39,6 @@ const closeMenu = () => {
   menuNav.classList.remove('opened');
   headerLogo.classList.remove('opened');
   mainContainer.style.visibility = 'visible';
-  intro.style.marginTop = '0';
   overlay.classList.remove('opened');
   body.style.overflow = 'overlay';
 };
