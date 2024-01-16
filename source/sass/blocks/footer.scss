@@ -41,8 +41,8 @@
   fill: $color-default-white;
 
   @include hover-focus {
-   filter: drop-shadow(0 0 5px $color-default-white);
-   transition: 0.3s;
+    filter: drop-shadow(0 0 5px $color-default-white);
+    transition: .3s;
   }
 
   @media (max-width: $vp-1023) {
@@ -72,31 +72,26 @@
   }
 }
 
-.footer-menu__item {
-  @include hover-focus {
-    transform: scale(1.1);
-    transition: 0.5s;
-  }
-}
-
 .footer-menu__item a {
   font: {
     family: $ff-montserrat-medium;
     size: 15px;
   }
+
   line-height: 19px;
   color: $color-default-white;
   cursor: pointer;
 
   @include hover-focus {
     text-shadow: $color-default-white 0 0 5px;
-    transition: 0.3s;
+    transition: .3s;
   }
 
   @media (max-width: $vp-1023) {
     font: {
       size: 12px;
     }
+
     line-height: 15px;
   }
 }
@@ -165,6 +160,6 @@
 
   @include hover-focus {
     filter: drop-shadow(0 0 3px $color-default-white);
-    transition: 0.3s;
+    transition: .3s;
   }
 }

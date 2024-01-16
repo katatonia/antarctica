@@ -15,12 +15,12 @@
   }
 
   &:disabled {
-    opacity: 0.5;
+    opacity: .3;
 
     pointer-events: none;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    opacity: .3;
   }
 }

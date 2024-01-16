@@ -42,6 +42,10 @@
 
     &.opened svg {
       fill: $color-tangaroa;
+
+      @include hover-focus {
+        opacity: .3;
+      }
     }
   }
 
@@ -69,7 +73,7 @@
 
   @include hover-focus {
     filter: drop-shadow(0 0 5px $color-default-white);
-    transition: 0.3s;
+    transition: .3s;
   }
 
   @media (max-width: $vp-1023) {

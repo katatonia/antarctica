@@ -22,6 +22,7 @@ form h2 {
     family: $ff-montserrat-medium;
     size: 18px;
   }
+
   line-height: 27px;
   color: $color-default-white;
   margin: 0 0 28px;
@@ -73,7 +74,7 @@ form .booking__br-mobile {
 
   @include hover-focus {
     box-shadow: 0 0 10px $color-default-white;
-    transition: 0.3s;
+    transition: .3s;
   }
 }
 
@@ -82,6 +83,7 @@ form .booking__br-mobile {
     family: $ff-montserrat-regular;
     size: 14px;
   }
+
   line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
@@ -89,6 +91,7 @@ form .booking__br-mobile {
 .form__field.agree {
   display: flex;
   position: relative;
+  align-items: center;
   margin-bottom: 33px;
   padding-right: 0;
 
@@ -103,6 +106,7 @@ form .booking__br-mobile {
     family: $ff-montserrat-regular;
     size: 10px;
   }
+
   line-height: 12px;
   color: $color-default-white;
   padding-left: 2.2em;
@@ -113,29 +117,24 @@ form .booking__br-mobile {
 }
 
 .form__field.agree input {
-  width: 18px;
-  height: 18px;
-  position: absolute;
+  width: 23px;
+  height: 23px;
   appearance: none;
   z-index: 1;
   border: none;
+  padding: 0;
 }
 
 .form__field.agree span {
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 23px;
+  height: 23px;
   background: url("../img/svg/checkbox-unchecked.svg") 0 0 no-repeat;
-
-  @media (max-width: $vp-767) {
-    width: 20px;
-    height: 20px;
-    left: 2px;
-    top: 3px;
-  }
+  left: 0;
+  top: 0;
 }
 
-.form__field.agree input:checked + span {
+.form__field.agree input:checked+span {
   background: url("../img/svg/checkbox-checked.svg") 0 0 no-repeat;
 }
 
@@ -144,6 +143,7 @@ form button {
     family: $ff-montserrat-semi-bold;
     size: 14px;
   }
+
   line-height: 21px;
   color: $color-tangaroa;
   width: 100%;
@@ -154,6 +154,6 @@ form button {
 
   @include hover-focus {
     box-shadow: 0 0 10px $color-default-white;
-    transition: 0.3s;
+    transition: .3s;
   }
 }

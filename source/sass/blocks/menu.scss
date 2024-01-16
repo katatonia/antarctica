@@ -41,31 +41,34 @@
   }
 }
 
-.menu__list-item {
-  @include hover-focus {
-    transform: scale(1.1);
-    transition: 0.5s;
-  }
-}
-
 .menu__list-item a {
   font: {
     family: $ff-montserrat-medium;
     size: 16px;
   }
+
   line-height: 19px;
   color: $color-default-white;
   cursor: pointer;
   text-align: center;
 
   @include hover-focus {
-    text-shadow: $color-default-white 0 0 5px;
+    transition: .3s;
+
+    @media (min-width: $vp-767) {
+      text-shadow: $color-default-white 0 0 5px;
+    }
+
+    @media (max-width: $vp-767) {
+      opacity: .3;
+    }
   }
 
   @media (max-width: $vp-1023) {
     font: {
       size: 14px;
     }
+
     line-height: 17px;
   }
 
@@ -73,6 +76,7 @@
     font: {
       size: 18px;
     }
+
     line-height: 22px;
     color: $color-tangaroa;
   }
@@ -88,7 +92,8 @@
   visibility: hidden;
 
   @include hover-focus {
-    stroke: $color-school-bus-yellow;
+    transition: .3s;
+    filter: drop-shadow(0 0 5px $color-default-white);
   }
 
   @media (max-width: $vp-767) {
@@ -103,6 +108,10 @@
       top: 20px;
       right: 15px;
       display: none;
+
+      @include hover-focus {
+        opacity: .3;
+      }
     }
   }
 }
